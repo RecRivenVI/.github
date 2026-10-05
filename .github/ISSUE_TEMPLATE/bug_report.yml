@@ -1,0 +1,51 @@
+name: 问题报告
+description: 报告错误、崩溃或与说明不符的行为
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 发生了什么。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 按顺序写出能让问题重现的操作。
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: input
+    id: minecraft
+    attributes:
+      label: Minecraft 版本与加载器
+      description: 例如加载器名称与版本号。
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 项目版本
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志或崩溃报告
+      description: 粘贴 `logs/latest.log` 或 `crash-reports/` 中的相关内容。
+      render: text
+  - type: textarea
+    id: mods
+    attributes:
+      label: 其他已安装的模组
